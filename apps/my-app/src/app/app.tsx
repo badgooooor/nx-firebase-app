@@ -1,7 +1,7 @@
 export function App() {
   return (
     <div>
-      <div>Hello world</div>
+      <div className="font-lg">Hello world</div>
     </div>
   );
 }
