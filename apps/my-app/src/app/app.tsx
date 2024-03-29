@@ -3,8 +3,8 @@ import { Button } from '@acme/ui';
 export function App() {
   return (
     <div>
-      <div className="font-lg">Hello world</div>
-      <Button>Hello</Button>
+      <div className="bg-indigo-500 p-2 font-mono">Hello world</div>
+      <Button>Shared button</Button>
     </div>
   );
 }
