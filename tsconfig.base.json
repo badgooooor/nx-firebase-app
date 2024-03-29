@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@acme/ui": ["packages/ui/src/index.ts"],
-      "@acme/ui/*": ["packages/ui/src/*"],
+      "@acme/ui/*": ["packages/ui/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
