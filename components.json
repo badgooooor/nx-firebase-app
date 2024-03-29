@@ -9,7 +9,7 @@
     "cssVariables": true
   },
   "aliases": {
-    "components": "@acme/ui/components",
-    "utils": "@acme/ui/utils"
+    "components": "@acme/ui/lib",
+    "utils": "@acme/ui/lib/utils"
   }
 }

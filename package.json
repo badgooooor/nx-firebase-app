@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nx serve"
+    "dev": "nx serve",
+    "scaffold-ui": "npx shadcn-ui@latest add"
   },
   "private": true,
   "devDependencies": {
@@ -53,6 +54,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "react": "18.2.0",

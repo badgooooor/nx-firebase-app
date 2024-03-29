@@ -1,10 +1,10 @@
-import { Ui } from '@acme/ui';
+import { Button } from '@acme/ui';
 
 export function App() {
   return (
     <div>
       <div className="font-lg">Hello world</div>
-      <Ui />
+      <Button>Hello</Button>
     </div>
   );
 }
