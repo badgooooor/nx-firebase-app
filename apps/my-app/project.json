@@ -30,6 +30,24 @@
           "hmr": false
         }
       }
+    },
+    "firebase": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "firebase --config=firebase.json"
+      },
+      "configurations": {
+        "production": {
+          "command": "firebase --config=firebase.json"
+        }
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build"],
+      "options": {
+        "command": "nx run my-app:firebase deploy --only hosting:my-app"
+      }
     }
   }
 }
