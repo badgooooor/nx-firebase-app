@@ -1,0 +1,55 @@
+{
+  "database": {
+    "rules": "apps/nx-firebase-app/database.rules.json"
+  },
+  "firestore": {
+    "rules": "apps/nx-firebase-app/firestore.rules",
+    "indexes": "apps/nx-firebase-app/firestore.indexes.json"
+  },    
+  "hosting": [
+    {
+      "target": "my-app",
+      "public": "dist/apps/my-app",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ],
+  "storage": {
+      "rules": "apps/nx-firebase-app/storage.rules"
+  },
+  "functions": [],
+  "emulators": {
+    "auth": {
+      "port": 9099
+    },
+    "functions": {
+      "port": 5001
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "database": {
+      "port": 9000
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "pubsub": {
+      "port": 8085
+    },
+    "storage": {
+      "port": 9199
+    },
+    "eventarc": {
+      "port": 9299
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
+  }
+}
