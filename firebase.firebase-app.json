@@ -1,10 +1,10 @@
 {
   "database": {
-    "rules": "apps/nx-firebase-app/database.rules.json"
+    "rules": "apps/firebase-app/database.rules.json"
   },
   "firestore": {
-    "rules": "apps/nx-firebase-app/firestore.rules",
-    "indexes": "apps/nx-firebase-app/firestore.indexes.json"
+    "rules": "apps/firebase-app/firestore.rules",
+    "indexes": "apps/firebase-app/firestore.indexes.json"
   },    
   "hosting": [
     {
@@ -19,7 +19,7 @@
     }
   ],
   "storage": {
-      "rules": "apps/nx-firebase-app/storage.rules"
+      "rules": "apps/firebase-app/storage.rules"
   },
   "functions": [],
   "emulators": {
@@ -27,7 +27,7 @@
       "port": 9099
     },
     "functions": {
-      "port": 5001
+      "port": 5002
     },
     "firestore": {
       "port": 8080
@@ -36,7 +36,7 @@
       "port": 9000
     },
     "hosting": {
-      "port": 5000
+      "port": 5001
     },
     "pubsub": {
       "port": 8085
