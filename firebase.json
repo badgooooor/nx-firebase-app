@@ -16,6 +16,16 @@
           "destination": "/index.html"
         }
       ]
+    },
+    {
+      "target": "my-app-2",
+      "public": "dist/apps/my-app-2",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
     }
   ],
   "storage": {

@@ -7,6 +7,9 @@
       "hosting": {
         "my-app": [
           "test-monorepo-17d9e"
+        ],
+        "my-app-2": [
+          "my-app-2-dd537"
         ]
       }
     }
