@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "development": "test-monorepo-17d9e"
+  },
+  "targets": {
+    "test-monorepo-17d9e": {
+      "hosting": {
+        "my-app": [
+          "test-monorepo-17d9e"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
