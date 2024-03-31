@@ -1,0 +1,35 @@
+{
+  "name": "my-app-2",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/my-app-2/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project my-app-2 --web",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "options": {
+        "outputPath": "dist/apps/my-app-2",
+        "postcssConfig": "apps/my-app-2/postcss.config.js",
+        "configFile": "apps/my-app-2/vite.config.ts"
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildLibsFromSource": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "my-app-2:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "my-app-2:build:production",
+          "hmr": false
+        }
+      }
+    },
+  }
+}
