@@ -33,3 +33,4 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
 
       - run: npx nx affected --target=build --base=origin/main --parallel
+      - run: npx nx affected --target=lint --base=origin/main --parallel
