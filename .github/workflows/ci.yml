@@ -32,6 +32,7 @@ jobs:
       - run: npm ci
       - uses: nrwl/nx-set-shas@v4
 
-      - run: npx nx affected --target=build --base=origin/main --parallel
-      - run: npx nx affected --target=lint --base=origin/main --parallel
-      - run: npx nx affected --target=test --base=origin/main --parallel
+      - uses: mansagroup/nrwl-nx-action@v3
+        with:
+          targets: build
+          projects: my-app,my-app-2
