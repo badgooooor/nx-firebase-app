@@ -34,5 +34,5 @@ jobs:
 
       - uses: mansagroup/nrwl-nx-action@v3
         with:
-          targets: build
+          targets: build,lint,test
           projects: my-app,my-app-2
