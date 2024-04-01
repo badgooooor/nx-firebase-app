@@ -11,7 +11,8 @@ permissions:
   contents: read
 
 jobs:
-  main:
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,7 +33,36 @@ jobs:
       - run: npm ci
       - uses: nrwl/nx-set-shas@v4
 
-      - uses: mansagroup/nrwl-nx-action@v3
+      - name: Build, lint and test
+        uses: mansagroup/nrwl-nx-action@v3
         with:
           targets: build,lint,test
           projects: my-app,my-app-2
+
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+  deploy:
+    name: Deploy to Firebase
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      
+      - name: Deploy my-app to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting:my-app
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+
